@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buzurxonov Fayzulloh — SMM Mutaxassisi</title>
+<style>
+:root{--c:#00FFD1;--c2:#00C2FF;--dark:#040B1A}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:#E8F4FF;font-family:'Segoe UI',sans-serif;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#040B1A}::-webkit-scrollbar-thumb{background:rgba(0,255,209,.22);border-radius:2px}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(0,255,209,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,209,0.022) 1px,transparent 1px);background-size:70px 70px}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+#nav{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:12px}
+.navdot{width:8px;height:8px;border-radius:50%;background:rgba(0,255,209,0.22);cursor:pointer;transition:all .3s;border:1px solid rgba(0,255,209,0.28)}
+.navdot.on{width:10px;height:10px;background:var(--c);box-shadow:0 0 12px var(--c);border-color:var(--c)}
+.slide{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 64px;opacity:0;transform:translateY(50px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.ring-svg{display:block;transform:rotate(-90deg);transform-box:fill-box}
+.slide.vis{opacity:1;transform:translateY(0);pointer-events:auto}
+.inner{max-width:1280px;width:100%}
+.div{height:1px;background:linear-gradient(90deg,transparent,rgba(0,255,209,.15),transparent);position:relative;z-index:1}
+.sec-title{font-family:Georgia,serif;font-size:60px;font-weight:800;background:linear-gradient(90deg,#fff,var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;line-height:1}
+.sec-sub{font-size:12px;color:rgba(232,244,255,.38);letter-spacing:3px;text-transform:uppercase;margin-bottom:44px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,255,209,.07);border:1px solid rgba(0,255,209,.18);padding:6px 18px;border-radius:100px;font-size:11px;letter-spacing:2px;color:var(--c);text-transform:uppercase;margin-bottom:20px}
+.card{border:1px solid rgba(0,255,209,.13);background:rgba(0,255,209,.03);border-radius:18px;padding:28px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--c),transparent);animation:shimmer 3s ease-in-out infinite}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes twinkle{0%,100%{opacity:.45}50%{opacity:.05}}
+@keyframes kp{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes floatUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroGlow{0%,100%{filter:drop-shadow(0 0 28px rgba(0,255,209,.18))}50%{filter:drop-shadow(0 0 60px rgba(0,255,209,.42))}}
+@keyframes pinPulse{0%{box-shadow:0 0 0 0 rgba(0,255,209,.65)}70%{box-shadow:0 0 0 10px rgba(0,255,209,0)}100%{box-shadow:0 0 0 0 rgba(0,255,209,0)}}
+@keyframes b1a{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+@keyframes b2a{0%,100%{transform:scaleY(.7)}50%{transform:scaleY(1.2)}}
+@keyframes b3a{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(.9)}}
+@keyframes tld{0%{stroke-dashoffset:50}60%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes spR{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes vrP{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+@keyframes vplP{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes sgW{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes scCut{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(18deg)}}
+@keyframes clD{0%{stroke-dashoffset:36;opacity:0}30%{opacity:1}100%{stroke-dashoffset:-36;opacity:0}}
+@keyframes cwS{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes srA{0%{transform:scale(.2);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+@keyframes chT{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes plnF{0%,100%{transform:translate(-3px,3px)}50%{transform:translate(3px,-3px)}}
+@keyframes trlF{0%,100%{opacity:.3}50%{opacity:.8}}
+@keyframes snR{0%,100%{transform:translateY(3px)}50%{transform:translateY(-3px)}}
+@keyframes ryP{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes rktF{0%,100%{transform:translateY(2px) rotate(-45deg)}50%{transform:translateY(-3px) rotate(-45deg)}}
+@keyframes flmD{from{transform:scaleY(.8)}to{transform:scaleY(1.3)}}
+@keyframes bdP{0%,100%{filter:drop-shadow(0 0 2px #00FFD1)}50%{filter:drop-shadow(0 0 10px #00FFD1)}}
+@keyframes wnB{0%,100%{opacity:.2}50%{opacity:1}}
+@keyframes dmS{0%,100%{transform:rotate(-5deg) scale(1)}50%{transform:rotate(5deg) scale(1.06)}}
+@keyframes dsP{0%,100%{opacity:0}50%{opacity:.8}}
+@keyframes stP{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes strR{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+@keyframes bfF{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes lfS{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes lvG{0%{stroke-dashoffset:22}60%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes tkM{0%,100%{transform:translateX(-2px)}50%{transform:translateX(2px)}}
+@keyframes wlR{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes grT{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes clD2{0%{stroke-dashoffset:60;opacity:0}30%{opacity:1}80%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.3}}
+@keyframes cdP{0%,100%{r:2.5;opacity:.5}50%{r:4.5;opacity:1}}
+@keyframes waveAnim{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes dropAnim{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(4px) scaleY(1.15)}}
+@keyframes wheatSway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+@keyframes crystalGlow{0%,100%{filter:drop-shadow(0 0 3px #00FFD1)}50%{filter:drop-shadow(0 0 12px #00FFD1)}}
+@keyframes bubbleRise{0%{transform:translateY(0);opacity:.8}100%{transform:translateY(-20px);opacity:0}}
+/* hero */
+.hero-name{font-family:Georgia,serif;font-size:130px;font-weight:900;line-height:.88;letter-spacing:3px;background:linear-gradient(135deg,#fff 0%,var(--c) 55%,var(--c2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:floatUp .9s ease both .4s,heroGlow 3s ease-in-out 1s infinite;margin-bottom:10px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,255,209,.2);background:rgba(0,255,209,.06);padding:7px 22px;border-radius:100px;font-size:11px;letter-spacing:3px;color:var(--c);margin-bottom:38px;animation:floatUp .8s ease both .2s}
+.dot-pulse{width:6px;height:6px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);animation:kp 2s ease infinite}
+.hero-sub{font-size:14px;font-weight:300;letter-spacing:7px;color:rgba(232,244,255,.42);text-transform:uppercase;margin:22px 0 54px;animation:floatUp .9s ease both .6s}
+/* skill */
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill-card{border:1px solid rgba(0,255,209,.13);background:rgba(0,255,209,.03);border-radius:16px;padding:26px 14px;text-align:center;transition:all .4s cubic-bezier(.16,1,.3,1);cursor:default;opacity:0;transform:translateY(24px)}
+.skill-card.vis{opacity:1;transform:translateY(0)}
+.skill-card:hover{border-color:var(--c);background:rgba(0,255,209,.08);transform:translateY(-6px)!important;box-shadow:0 16px 36px rgba(0,255,209,.1),0 0 0 1px var(--c)}
+.skill-name{font-size:12px;font-weight:600;margin-top:14px}
+/* lang */
+.lang-item{margin-bottom:24px;opacity:0;transform:translateX(-20px);transition:all .6s ease}
+.lang-item.vis{opacity:1;transform:translateX(0)}
+.lang-header{display:flex;justify-content:space-between;margin-bottom:10px}
+.lang-name2{font-size:14px;font-weight:500}
+.lang-pct{font-size:20px;font-weight:800;color:var(--c);font-family:monospace}
+.lang-track{height:8px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.lang-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--c2),var(--c));box-shadow:0 0 12px var(--c);width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1)}
+.rings-row{display:flex;justify-content:space-around;margin-top:32px}
+.ring-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ring-label{font-size:11px;color:rgba(232,244,255,.5);text-align:center}
+/* proj */
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.proj-card{border:1px solid rgba(0,255,209,.13);background:rgba(0,255,209,.03);border-radius:14px;padding:22px 12px;text-align:center;transition:all .4s cubic-bezier(.16,1,.3,1);cursor:default;opacity:0;transform:scale(.88)}
+.proj-card.vis{opacity:1;transform:scale(1)}
+.proj-card:hover{border-color:var(--c);transform:scale(1.06)!important;box-shadow:0 12px 28px rgba(0,255,209,.12)}
+.proj-name{font-size:13px;font-weight:600;margin-top:12px}
+.proj-plus{border:1px dashed rgba(0,255,209,.12);border-radius:14px;padding:22px 12px;text-align:center;opacity:.28}
+/* timeline */
+.timeline{display:flex;flex-direction:column;gap:11px}
+.step{display:flex;gap:16px;padding:14px 18px;border:1px solid rgba(0,255,209,.1);background:rgba(0,255,209,.03);border-radius:12px;opacity:0;transform:translateX(-24px);transition:all .6s cubic-bezier(.16,1,.3,1)}
+.step.vis{opacity:1;transform:translateX(0)}
+.step:hover{border-color:var(--c);transform:translateX(6px)!important;background:rgba(0,255,209,.06)}
+.step-num{font-family:monospace;font-size:28px;color:var(--c);min-width:42px;line-height:1;font-weight:800}
+.step-title{font-size:14px;font-weight:600;margin-bottom:3px}
+.step-desc{font-size:12px;color:rgba(232,244,255,.4)}
+/* metrics */
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{background:rgba(0,255,209,.04);border:1px solid rgba(0,255,209,.12);border-radius:14px;padding:18px 14px;text-align:center;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);transition:all .6s cubic-bezier(.16,1,.3,1)}
+.metric.vis{opacity:1;transform:translateY(0)}
+.metric::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--c),transparent);animation:shimmer 3s ease-in-out infinite}
+.metric-val{font-family:monospace;font-size:22px;font-weight:800;color:var(--c);text-shadow:0 0 14px rgba(0,255,209,.5);line-height:1.1}
+.metric-lbl{font-size:10px;color:rgba(232,244,255,.45);letter-spacing:1.5px;text-transform:uppercase;margin-top:5px}
+.metric-grow{font-size:11px;color:#00ff88;margin-top:4px;font-weight:600}
+/* layout */
+.g2{display:grid;gap:44px}
+.gc65{grid-template-columns:1fr 1.1fr}
+.gc56{grid-template-columns:1.1fr .9fr}
+.gc11{grid-template-columns:1fr 1fr}
+/* funnel */
+.funnel{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:20px}
+.funnel-step{text-align:center;padding:10px 0;font-size:13px;font-weight:600;border-radius:8px;border:1px solid rgba(0,255,209,.12);background:rgba(0,255,209,.04);opacity:0;transform:translateY(14px);transition:all .55s ease}
+.funnel-step.vis{opacity:1;transform:translateY(0)}
+.funnel-step.hi{border-color:var(--c);background:rgba(0,255,209,.12);color:var(--c)}
+/* pin */
+.pin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pin{border:1px solid rgba(0,255,209,.15);background:rgba(0,255,209,.04);border-radius:10px;padding:12px 8px;text-align:center;opacity:0;transform:scale(.8);transition:all .5s cubic-bezier(.16,1,.3,1)}
+.pin.vis{opacity:1;transform:scale(1)}
+.pin:hover{border-color:var(--c);background:rgba(0,255,209,.1);transform:scale(1.06)!important}
+.pin-dot{width:10px;height:10px;border-radius:50%;background:var(--c);margin:0 auto 6px;animation:pinPulse 2s ease-out infinite}
+.pin-name{font-size:11px;font-weight:600}
+/* cosmos */
+.cosmos-row{display:flex;gap:36px;align-items:center}
+.cosmos-pt{display:flex;align-items:center;gap:14px;padding:13px 18px;border:1px solid rgba(0,255,209,.1);border-radius:10px;background:rgba(0,255,209,.03);font-size:14px;opacity:0;transform:translateX(20px);transition:all .6s ease;margin-bottom:10px}
+.cosmos-pt.vis{opacity:1;transform:translateX(0)}
+.cosmos-dot2{width:7px;height:7px;border-radius:50%;background:var(--c);flex-shrink:0;box-shadow:0 0 8px var(--c)}
+/* info row */
+.info-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid rgba(0,255,209,.1);border-radius:10px;background:rgba(0,255,209,.03);margin-bottom:10px;opacity:0;transform:translateX(-16px);transition:all .5s ease}
+.info-row.vis{opacity:1;transform:translateX(0)}
+/* scroll hint */
+.scroll-hint{margin-top:62px;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.3;font-size:10px;letter-spacing:3px;text-transform:uppercase;animation:floatUp 1s ease both 1.2s}
+.scroll-line{width:1px;height:46px;background:linear-gradient(to bottom,var(--c),transparent);animation:kp 2s ease infinite}
+/* case study card */
+.cs-card{border:1px solid rgba(0,255,209,.13);background:rgba(0,255,209,.03);border-radius:18px;padding:28px;position:relative;overflow:hidden}
+.cs-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--c),transparent);animation:shimmer 3s ease-in-out infinite}
+/* progress bar horizontal */
+.hbar-wrap{margin-bottom:14px}
+.hbar-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px;color:rgba(232,244,255,.7)}
+.hbar-track{height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.hbar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--c2),var(--c));box-shadow:0 0 8px var(--c);width:0;transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+/* stat box */
+.stat-box{background:rgba(0,255,209,.05);border:1px solid rgba(0,255,209,.12);border-radius:12px;padding:16px;text-align:center;position:relative;overflow:hidden}
+.stat-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--c),transparent);animation:shimmer 4s ease-in-out infinite}
+.stat-val{font-family:monospace;font-size:28px;font-weight:800;color:var(--c);text-shadow:0 0 12px rgba(0,255,209,.4)}
+.stat-lbl{font-size:10px;color:rgba(232,244,255,.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.stat-grow{font-size:11px;color:#00ff88;margin-top:3px;font-weight:600}
+
+/* ═══ RESPONSIVE — TELEFON ═══ */
+@media(max-width:768px){
+  html,body{overflow-x:hidden;width:100%}
+  .slide{padding:60px 16px;min-height:auto;pointer-events:auto;transform:none!important;opacity:1!important;transition:none!important}
+  .inner{max-width:100%}
+  #nav{right:8px;gap:7px}
+  .navdot{width:6px;height:6px}
+  .navdot.on{width:8px;height:8px}
+
+  /* Hero */
+  .hero-name{font-size:clamp(26px,9vw,48px)!important;letter-spacing:0!important;line-height:.92!important}
+  .hero-sub{font-size:10px;letter-spacing:3px;margin:14px 0 28px}
+  .hero-tag{font-size:9px;padding:5px 12px;margin-bottom:20px;letter-spacing:2px}
+  .scroll-hint{margin-top:28px}
+
+  /* Sec */
+  .sec-title{font-size:32px!important}
+  .sec-sub{font-size:9px;letter-spacing:2px;margin-bottom:24px}
+
+  /* All grids -> 1 col */
+  .g2,.gc65,.gc56,.gc11{display:flex!important;flex-direction:column!important;gap:20px!important}
+
+  /* Skill 2 col */
+  .skill-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px}
+  .skill-card{padding:16px 10px}
+  .skill-card svg{width:40px;height:40px}
+
+  /* Proj 2 col */
+  .proj-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px}
+  .proj-card{padding:16px 10px}
+  .proj-card svg{width:36px;height:36px}
+
+  /* Metrics 2 col */
+  .metrics-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px}
+  .metric{padding:12px 8px}
+  .metric-val{font-size:16px}
+
+  /* Stats 2 col */
+  .stat-val{font-size:16px}
+  .stat-box{padding:12px 8px}
+
+  /* Rings */
+  .rings-row{flex-wrap:wrap;gap:12px;justify-content:center}
+  .rings-row svg{width:80px!important;height:80px!important}
+  .ring-label{font-size:10px}
+
+  /* Lang */
+  .lang-pct{font-size:16px}
+  .lang-name2{font-size:13px}
+
+  /* Card */
+  .card{padding:16px}
+  .cs-card{padding:16px}
+
+  /* Steps */
+  .timeline{gap:8px}
+  .step{padding:10px 12px}
+  .step-num{font-size:20px;min-width:30px}
+  .step-title{font-size:13px}
+  .step-desc{font-size:11px}
+
+  /* Badge */
+  .badge{font-size:9px;padding:4px 10px;letter-spacing:1px}
+
+  /* Funnel */
+  .funnel-step{font-size:11px;padding:8px 4px}
+
+  /* Pins 3 col */
+  .pin-grid{grid-template-columns:repeat(3,1fr)!important;gap:6px}
+  .pin{padding:8px 4px}
+  .pin-name{font-size:9px}
+
+  /* Cosmos */
+  .cosmos-row{flex-direction:column!important;align-items:center}
+  .cosmos-pt{font-size:12px;padding:10px 12px}
+
+  /* Info rows */
+  .info-row{padding:10px 12px;font-size:12px}
+
+  /* Big N */
+  #bigN{font-size:50px!important}
+
+  /* Hbar */
+  .hbar-label{font-size:11px}
+
+  /* Hero rings row */
+  .hero-rings-row{flex-direction:column!important;align-items:center!important;gap:16px!important}
+
+  /* Inline grid overrides */
+  [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
+  [style*="grid-template-columns:repeat(3"]{grid-template-columns:repeat(2,1fr)!important}
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:1fr 1.1fr"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:1.1fr"]{grid-template-columns:1fr!important}
+  [style*="max-width:800px"]{font-size:12px!important}
+  [style*="font-size:130px"]{font-size:clamp(26px,9vw,48px)!important;letter-spacing:0!important}
+  [style*="font-size:100px"]{font-size:50px!important}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div id="stars"></div>
+<div id="nav">
+  <div class="navdot on" onclick="goTo(0)"></div>
+  <div class="navdot" onclick="goTo(1)"></div>
+  <div class="navdot" onclick="goTo(2)"></div>
+  <div class="navdot" onclick="goTo(3)"></div>
+  <div class="navdot" onclick="goTo(4)"></div>
+  <div class="navdot" onclick="goTo(5)"></div>
+  <div class="navdot" onclick="goTo(6)"></div>
+</div>
+
+<!-- ══ SLIDE 1: HERO ══ -->
+<section class="slide" id="s0">
+<div class="inner" style="text-align:center">
+  <div class="hero-tag"><div class="dot-pulse"></div>SMM Portfolio 2026</div>
+  <div class="hero-name">BUZURXONOV<br>FAYZULLOH</div>
+  <div class="hero-sub">SMM Mutaxassisi</div>
+  <div class="hero-rings-row" style="display:flex;justify-content:center;gap:28px;animation:floatUp 1s ease both .8s;flex-wrap:wrap">
+    <!-- Ring 1 YIL -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div style="position:relative;width:128px;height:128px">
+        <svg class="ring-svg" width="128" height="128" viewBox="0 0 128 128">
+          <defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs>
+          <circle cx="64" cy="64" r="50" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="8"/>
+          <circle cx="64" cy="64" r="50" fill="none" stroke="url(#hg1)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" id="hr1" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 8px #00FFD1)"/>
+        </svg>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:32px;font-weight:900;color:var(--c);font-family:monospace;line-height:1" id="hc1">0</div>
+          <div style="font-size:14px;font-weight:700;color:var(--c);letter-spacing:1px">YIL</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:rgba(232,244,255,.38);letter-spacing:1px">Tajriba</div>
+    </div>
+    <!-- Ring 11 TA -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div style="position:relative;width:128px;height:128px">
+        <svg class="ring-svg" width="128" height="128" viewBox="0 0 128 128">
+          <defs><linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs>
+          <circle cx="64" cy="64" r="50" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="8"/>
+          <circle cx="64" cy="64" r="50" fill="none" stroke="url(#hg2)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" id="hr2" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 8px #00FFD1)"/>
+        </svg>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:32px;font-weight:900;color:var(--c);font-family:monospace;line-height:1" id="hc2">0</div>
+          <div style="font-size:14px;font-weight:700;color:var(--c);letter-spacing:1px">TA</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:rgba(232,244,255,.38);letter-spacing:1px">Loyihalar</div>
+    </div>
+    <!-- Space Academy -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div style="width:128px;height:128px;border-radius:16px;border:1px solid rgba(0,255,209,.2);background:rgba(0,255,209,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--c),transparent);animation:shimmer 3s ease-in-out infinite"></div>
+        <svg width="36" height="36" viewBox="0 0 36 36">
+          <path d="M18 4 L22 14 L33 14 L24 21 L27 32 L18 25 L9 32 L12 21 L3 14 L14 14Z" fill="none" stroke="#00FFD1" stroke-width="1.8" style="animation:stP 2s ease-in-out infinite;transform-origin:18px 18px"/>
+        </svg>
+        <div style="font-size:18px;font-weight:800;color:var(--c);font-family:monospace">Space</div>
+        <div style="font-size:12px;color:var(--c2);font-weight:600;letter-spacing:1px">Academy</div>
+      </div>
+      <div style="font-size:11px;color:rgba(232,244,255,.38);letter-spacing:1px">Ta'lim</div>
+    </div>
+  </div>
+  <div class="scroll-hint">Pastga aylantiring<div class="scroll-line"></div></div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 2: KO'NIKMALAR ══ -->
+<section class="slide" id="s1">
+<div class="inner">
+  <div class="sec-title">Ko'nikmalar</div>
+  <div class="sec-sub">Asosiy Qobiliyatlar & Til Bilimlari</div>
+  <div class="g2 gc56">
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="#00FFD1" stroke-width="1.5" style="animation:kp 2s ease-in-out infinite"/><path d="M7 3v4l3 2" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+        Asosiy Ko'nikmalar
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><rect x="7" y="28" width="14" height="20" rx="3" fill="#00FFD1" opacity=".7" style="animation:b1a 2.5s ease-in-out infinite;transform-origin:14px 48px"/><rect x="20" y="18" width="14" height="30" rx="3" fill="#00FFD1" opacity=".85" style="animation:b2a 2.5s ease-in-out .3s infinite;transform-origin:27px 48px"/><rect x="33" y="22" width="14" height="26" rx="3" fill="#00FFD1" style="animation:b3a 2.5s ease-in-out .6s infinite;transform-origin:40px 48px"/><polyline points="14,28 27,18 40,22" fill="none" stroke="#00C2FF" stroke-width="2.5" stroke-linecap="round" style="stroke-dasharray:50;animation:tld 2.5s ease-in-out infinite"/><circle cx="40" cy="22" r="3.5" fill="#00C2FF" style="animation:kp 2s ease-in-out infinite"/></svg>
+          <div class="skill-name">SMM Strategiya</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><g style="animation:spR 4s linear infinite;transform-origin:27px 27px"><path d="M27 5 L29 22 L27 27 L25 22Z" fill="#00FFD1" opacity=".9"/><path d="M49 27 L32 29 L27 27 L32 25Z" fill="#00FFD1" opacity=".7"/><path d="M27 49 L25 32 L27 27 L29 32Z" fill="#00FFD1" opacity=".9"/><path d="M5 27 L22 25 L27 27 L22 29Z" fill="#00FFD1" opacity=".7"/></g><g style="animation:spR 4s linear .5s infinite reverse;transform-origin:27px 27px"><path d="M27 10 L28.5 22 L27 27 L25.5 22Z" fill="#00C2FF" opacity=".5" transform="rotate(45,27,27)"/><path d="M27 10 L28.5 22 L27 27 L25.5 22Z" fill="#00C2FF" opacity=".5" transform="rotate(135,27,27)"/><path d="M27 10 L28.5 22 L27 27 L25.5 22Z" fill="#00C2FF" opacity=".5" transform="rotate(225,27,27)"/><path d="M27 10 L28.5 22 L27 27 L25.5 22Z" fill="#00C2FF" opacity=".5" transform="rotate(315,27,27)"/></g><circle cx="27" cy="27" r="5" fill="white" style="animation:kp 2s ease-in-out infinite"/></svg>
+          <div class="skill-name">Kreativ Kontent</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="20" fill="none" stroke="#00FFD1" stroke-width="1.5" opacity=".3" style="animation:vrP 2.2s ease-in-out infinite;transform-origin:27px 27px"/><circle cx="27" cy="27" r="20" fill="none" stroke="#00FFD1" stroke-width="1.5" opacity=".3" style="animation:vrP 2.2s ease-in-out .7s infinite;transform-origin:27px 27px"/><circle cx="27" cy="27" r="18" fill="rgba(0,255,209,0.08)" stroke="#00FFD1" stroke-width="1.5"/><polygon points="21,18 21,36 39,27" fill="#00FFD1" style="animation:vplP 2s ease-in-out infinite"/></svg>
+          <div class="skill-name">Videografiya</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><rect x="16" y="8" width="22" height="34" rx="3" fill="none" stroke="#00FFD1" stroke-width="1.8"/><rect x="20" y="36" width="14" height="2" rx="1" fill="#00FFD1" opacity=".5"/><rect x="20" y="44" width="5" height="7" rx="1" fill="#00FFD1" style="animation:sgW 2s ease-in-out infinite"/><rect x="27" y="40" width="5" height="11" rx="1" fill="#00FFD1" style="animation:sgW 2s ease-in-out .25s infinite"/><rect x="34" y="36" width="5" height="15" rx="1" fill="#00FFD1" style="animation:sgW 2s ease-in-out .5s infinite"/><rect x="41" y="32" width="5" height="19" rx="1" fill="#00FFD1" style="animation:sgW 2s ease-in-out .75s infinite"/></svg>
+          <div class="skill-name">Mobilografiya</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><g style="animation:scCut 2.5s ease-in-out infinite;transform-origin:20px 27px"><circle cx="18" cy="21" r="5.5" fill="none" stroke="#00FFD1" stroke-width="2"/><circle cx="18" cy="33" r="5.5" fill="none" stroke="#00FFD1" stroke-width="2"/><line x1="23" y1="24" x2="46" y2="14" stroke="#00FFD1" stroke-width="2.5" stroke-linecap="round"/><line x1="23" y1="30" x2="46" y2="40" stroke="#00FFD1" stroke-width="2.5" stroke-linecap="round"/></g><line x1="8" y1="27" x2="50" y2="27" stroke="#00C2FF" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6" style="stroke-dasharray:36;animation:clD 2.5s ease-in-out infinite"/></svg>
+          <div class="skill-name">VN & CapCut</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><g style="animation:cwS 6s linear infinite;transform-origin:27px 27px"><path d="M27 27 L27 9 A18 18 0 0 1 42.6 18 Z" fill="#00FFD1" opacity=".85"/><path d="M27 27 L42.6 18 A18 18 0 0 1 42.6 36 Z" fill="#00C2FF" opacity=".85"/><path d="M27 27 L42.6 36 A18 18 0 0 1 27 45 Z" fill="#7B61FF" opacity=".85"/><path d="M27 27 L27 45 A18 18 0 0 1 11.4 36 Z" fill="#FF6B9D" opacity=".85"/><path d="M27 27 L11.4 36 A18 18 0 0 1 11.4 18 Z" fill="#FFB800" opacity=".85"/><path d="M27 27 L11.4 18 A18 18 0 0 1 27 9 Z" fill="#00FF88" opacity=".85"/></g><circle cx="27" cy="27" r="9" fill="#040B1A" style="animation:kp 2.5s ease-in-out infinite"/><circle cx="27" cy="27" r="4" fill="#00FFD1"/></svg>
+          <div class="skill-name">Canva & Photoshop</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="22" fill="none" stroke="#00FFD1" stroke-width="1" opacity=".2" style="animation:srA 2.5s ease-out infinite;transform-origin:27px 27px"/><circle cx="27" cy="27" r="22" fill="none" stroke="#00FFD1" stroke-width="1" opacity=".2" style="animation:srA 2.5s ease-out .8s infinite;transform-origin:27px 27px"/><circle cx="27" cy="27" r="22" fill="none" stroke="#00FFD1" stroke-width="1" opacity=".2" style="animation:srA 2.5s ease-out 1.6s infinite;transform-origin:27px 27px"/><circle cx="27" cy="21" r="7" fill="rgba(0,255,209,0.15)" stroke="#00FFD1" stroke-width="1.8"/><circle cx="16" cy="26" r="5" fill="rgba(0,194,255,0.15)" stroke="#00C2FF" stroke-width="1.5" opacity=".7"/><circle cx="38" cy="26" r="5" fill="rgba(0,194,255,0.15)" stroke="#00C2FF" stroke-width="1.5" opacity=".7"/><path d="M12 40 Q27 31 42 40" fill="none" stroke="#00FFD1" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="skill-name">Community Boshqaruv</div>
+        </div>
+        <div class="skill-card">
+          <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="20" fill="none" stroke="#00FFD1" stroke-width="1.8" style="animation:kp 2s ease-in-out infinite"/><line x1="27" y1="27" x2="27" y2="13" stroke="#00FFD1" stroke-width="2.5" stroke-linecap="round" style="animation:chT 2s linear infinite;transform-origin:27px 27px"/><line x1="27" y1="27" x2="37" y2="27" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" style="animation:chT 24s linear infinite;transform-origin:27px 27px"/><circle cx="27" cy="27" r="2.5" fill="#00FFD1"/></svg>
+          <div class="skill-name">Deadline Boshqaruv</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="#00FFD1" stroke-width="1.5"/><path d="M4 7 Q7 4 10 7 Q7 10 4 7Z" fill="#00FFD1" style="animation:kp 2s ease-in-out infinite"/></svg>
+        Til Bilimlari
+      </div>
+      <div class="card">
+        <div class="lang-item" id="l1"><div class="lang-header"><span class="lang-name2">O'zbek tili</span><span class="lang-pct">100%</span></div><div class="lang-track"><div class="lang-fill" id="lb1" data-w="100"></div></div></div>
+        <div class="lang-item" id="l2"><div class="lang-header"><span class="lang-name2">Rus tili</span><span class="lang-pct">80%</span></div><div class="lang-track"><div class="lang-fill" id="lb2" data-w="80"></div></div></div>
+        <div class="lang-item" id="l3"><div class="lang-header"><span class="lang-name2">Ingliz tili</span><span class="lang-pct">60%</span></div><div class="lang-track"><div class="lang-fill" id="lb3" data-w="60"></div></div></div>
+        <div class="rings-row">
+          <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#rg1)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="rc1" data-pct="100" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">O'zbek<br><span style="color:var(--c);font-weight:700">100%</span></div></div>
+          <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="rg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#rg2)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="rc2" data-pct="80" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">Rus<br><span style="color:var(--c);font-weight:700">80%</span></div></div>
+          <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="rg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#rg3)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="rc3" data-pct="60" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">Ingliz<br><span style="color:var(--c);font-weight:700">60%</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 3: LOYIHALAR ══ -->
+<section class="slide" id="s2">
+<div class="inner">
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px">
+    <div class="sec-title">11 ta Loyiha</div>
+    <div id="bigN" style="font-family:monospace;font-size:100px;font-weight:900;color:var(--c);opacity:.06;line-height:1">0</div>
+  </div>
+  <div class="sec-sub">Muvaffaqiyatli Yakunlangan Brendlar — Travel · B2B · Retail</div>
+  <div class="proj-grid">
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:plnF 3s ease-in-out infinite"><path d="M6 24 L34 13 L40 18 L26 24 L36 35 L31 37 L21 28 L11 32 L9 28Z" fill="#00FFD1" opacity=".9"/></g><line x1="2" y1="28" x2="12" y2="24" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" style="animation:trlF 3s ease-in-out infinite"/></svg><div class="proj-name">Apollo Travel</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><path d="M4 34 Q24 12 44 34" fill="none" stroke="#00FFD1" stroke-width="1.5" opacity=".2"/><g style="animation:snR 3s ease-in-out infinite;transform-origin:24px 30px"><circle cx="24" cy="30" r="8" fill="#00FFD1" opacity=".9"/><line x1="24" y1="19" x2="24" y2="15" stroke="#00FFD1" stroke-width="2" stroke-linecap="round" style="animation:ryP 3s ease-in-out infinite"/><line x1="35" y1="30" x2="39" y2="30" stroke="#00FFD1" stroke-width="2" stroke-linecap="round" style="animation:ryP 3s ease-in-out .15s infinite"/><line x1="13" y1="30" x2="9" y2="30" stroke="#00FFD1" stroke-width="2" stroke-linecap="round" style="animation:ryP 3s ease-in-out .3s infinite"/></g><line x1="2" y1="38" x2="46" y2="38" stroke="#00FFD1" stroke-width="1" opacity=".3"/></svg><div class="proj-name">Horizon Travel</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:rktF 2.5s ease-in-out infinite;transform-origin:24px 24px"><path d="M24 7 C24 7 13 20 13 28 L24 33 L35 28 C35 20 24 7 24 7Z" fill="#00FFD1" opacity=".9"/><ellipse cx="24" cy="28" rx="4" ry="3" fill="rgba(0,194,255,0.4)"/><polygon points="19,32 24,43 29,32" fill="#FF6B00" opacity=".9" style="animation:flmD .4s ease-in-out infinite alternate;transform-origin:24px 34px"/><polygon points="20,32 24,39 28,32" fill="#FFB800" opacity=".9" style="animation:flmD .4s ease-in-out .2s infinite alternate;transform-origin:24px 34px"/></g></svg><div class="proj-name">Cosmos Travel</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:bdP 2.5s ease-in-out infinite"><rect x="10" y="14" width="28" height="30" rx="2" fill="none" stroke="#00FFD1" stroke-width="1.8"/><rect x="8" y="36" width="32" height="8" rx="1" fill="rgba(0,255,209,0.1)" stroke="#00FFD1" stroke-width="1"/></g><rect x="12" y="18" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out infinite"/><rect x="21" y="18" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out .3s infinite"/><rect x="30" y="18" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out .6s infinite"/><rect x="12" y="27" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out .9s infinite"/><rect x="21" y="27" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out 1.2s infinite"/><rect x="30" y="27" width="6" height="6" rx="1" fill="#00FFD1" opacity=".5" style="animation:wnB 3s ease-in-out 1.5s infinite"/></svg><div class="proj-name">GSR</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:dmS 4s ease-in-out infinite;transform-origin:24px 24px"><polygon points="24,5 40,18 24,43 8,18" fill="none" stroke="#00FFD1" stroke-width="2"/><polygon points="24,5 40,18 24,43 8,18" fill="rgba(0,255,209,0.08)"/><line x1="8" y1="18" x2="40" y2="18" stroke="#00FFD1" stroke-width="1.5" opacity=".4"/><polygon points="24,5 31,12 24,15 17,12" fill="white" opacity=".7" style="animation:dsP 2s ease-in-out infinite"/></g></svg><div class="proj-name">Kashlux Design</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="#00FFD1" stroke-width="1" style="animation:strR 2s ease-out infinite;transform-origin:24px 24px"/><polygon points="24,5 27.5,17 40,17 30,25 34,37 24,29 14,37 18,25 8,17 20.5,17" fill="#00FFD1" opacity=".9" style="animation:stP 2s ease-in-out infinite;transform-origin:24px 24px"/></svg><div class="proj-name">Respect Me</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:bfF 2.5s ease-in-out infinite"><rect x="6" y="18" width="36" height="22" rx="3" fill="none" stroke="#00FFD1" stroke-width="2"/><path d="M15 18 L15 14 Q15 11 19 11 L29 11 Q33 11 33 14 L33 18" fill="none" stroke="#00FFD1" stroke-width="1.8"/><line x1="6" y1="28" x2="42" y2="28" stroke="#00FFD1" stroke-width="1.5" opacity=".35"/><rect x="19" y="25" width="10" height="7" rx="1.5" fill="rgba(0,255,209,0.25)" stroke="#00FFD1" stroke-width="1"/></g></svg><div class="proj-name">Respect Business</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:lfS 3s ease-in-out infinite;transform-origin:24px 38px"><path d="M24 38 C24 38 7 29 9 13 C18 9 35 11 37 24 C37 24 33 38 24 38Z" fill="rgba(0,255,209,0.15)" stroke="#00FFD1" stroke-width="1.8"/><line x1="24" y1="38" x2="19" y2="16" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" style="stroke-dasharray:22;animation:lvG 3s ease-in-out infinite"/></g></svg><div class="proj-name">Biogum uz</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:tkM 2s ease-in-out infinite"><rect x="2" y="17" width="28" height="18" rx="2" fill="none" stroke="#00FFD1" stroke-width="1.8"/><path d="M30 21 L39 21 L46 30 L46 35 L30 35Z" fill="none" stroke="#00FFD1" stroke-width="1.8"/><circle cx="11" cy="37" r="4.5" fill="none" stroke="#00FFD1" stroke-width="2" style="animation:wlR 1s linear infinite;transform-origin:11px 37px"/><circle cx="11" cy="37" r="1.5" fill="#00FFD1"/><circle cx="37" cy="37" r="4.5" fill="none" stroke="#00FFD1" stroke-width="2" style="animation:wlR 1s linear infinite;transform-origin:37px 37px"/><circle cx="37" cy="37" r="1.5" fill="#00FFD1"/></g></svg><div class="proj-name">Haulage Freight</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><g style="animation:grT 4s linear infinite;transform-origin:24px 24px"><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1"/><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1" transform="rotate(60,24,24)"/><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1" transform="rotate(120,24,24)"/><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1" transform="rotate(180,24,24)"/><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1" transform="rotate(240,24,24)"/><rect x="21" y="2" width="6" height="9" rx="2" fill="#00FFD1" transform="rotate(300,24,24)"/><circle cx="24" cy="24" r="12" fill="rgba(0,255,209,0.1)" stroke="#00FFD1" stroke-width="2"/><circle cx="24" cy="24" r="5" fill="#00FFD1" opacity=".85"/></g></svg><div class="proj-name">Hi-Pad</div></div>
+    <div class="proj-card"><svg width="48" height="48" viewBox="0 0 48 48"><polyline points="6,38 14,28 22,32 31,17 42,9" fill="none" stroke="#00FFD1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:60;animation:clD2 2.5s ease-in-out infinite"/><circle cx="42" cy="9" r="3" fill="#00FFD1" style="animation:cdP 2.5s ease-in-out infinite"/><line x1="6" y1="40" x2="46" y2="40" stroke="#00FFD1" stroke-width="1" opacity=".25"/><line x1="6" y1="8" x2="6" y2="40" stroke="#00FFD1" stroke-width="1" opacity=".25"/></svg><div class="proj-name">Rising Zone</div></div>
+    <div class="proj-plus"><div style="font-size:28px;margin-bottom:10px">+</div><div style="font-size:13px">Keyingisi...</div></div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 4: QO'SHIMCHA LOYIHALAR ══ -->
+<section class="slide" id="s3">
+<div class="inner">
+  <div class="sec-title">Qo'shimcha Loyihalar</div>
+  <div class="sec-sub">Qatnashilgan Brendlar — FMCG · Beauty · Food & Beverage</div>
+  <div class="proj-grid" style="grid-template-columns:repeat(5,1fr)">
+    <!-- Coca Cola -->
+    <div class="proj-card">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <defs><linearGradient id="wvg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00FFD1" stop-opacity="0"/><stop offset="50%" stop-color="#00FFD1"/><stop offset="100%" stop-color="#00FFD1" stop-opacity="0"/></linearGradient></defs>
+        <rect x="16" y="8" width="20" height="36" rx="10" fill="none" stroke="#00FFD1" stroke-width="2"/>
+        <rect x="18" y="6" width="16" height="5" rx="2" fill="none" stroke="#00FFD1" stroke-width="1.5" opacity=".6"/>
+        <g style="clip-path:inset(0 0 0 0 round 10px)">
+          <path d="M13 28 Q19 24 26 28 Q33 32 39 28" fill="none" stroke="#00FFD1" stroke-width="1.5" style="animation:snR 2s ease-in-out infinite"/>
+          <path d="M13 32 Q19 28 26 32 Q33 36 39 32" fill="none" stroke="#00FFD1" stroke-width="1" opacity=".5" style="animation:snR 2s ease-in-out .3s infinite"/>
+        </g>
+        <circle cx="26" cy="20" r="2" fill="#00FFD1" style="animation:bubbleRise 2s ease-out infinite"/>
+        <circle cx="22" cy="24" r="1.5" fill="#00FFD1" style="animation:bubbleRise 2s ease-out .5s infinite"/>
+        <circle cx="30" cy="22" r="1" fill="#00FFD1" style="animation:bubbleRise 2s ease-out 1s infinite"/>
+      </svg>
+      <div class="proj-name">Coca Cola</div>
+    </div>
+    <!-- Dovcha -->
+    <div class="proj-card">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <g style="animation:wheatSway 2.5s ease-in-out infinite;transform-origin:26px 44px">
+          <line x1="26" y1="44" x2="26" y2="20" stroke="#00FFD1" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="26" cy="16" rx="5" ry="10" fill="none" stroke="#00FFD1" stroke-width="1.8"/>
+          <line x1="26" y1="26" x2="18" y2="20" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+          <line x1="26" y1="30" x2="34" y2="24" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+          <line x1="26" y1="34" x2="18" y2="28" stroke="#00FFD1" stroke-width="1.2" stroke-linecap="round" opacity=".5"/>
+        </g>
+        <g style="animation:wheatSway 2.5s ease-in-out .4s infinite;transform-origin:36px 44px">
+          <line x1="36" y1="44" x2="36" y2="24" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+          <ellipse cx="36" cy="20" rx="4" ry="8" fill="none" stroke="#00FFD1" stroke-width="1.4" opacity=".6"/>
+        </g>
+      </svg>
+      <div class="proj-name">Dovcha</div>
+    </div>
+    <!-- Havakand -->
+    <div class="proj-card">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <path d="M26 10 C26 10 14 22 14 32 C14 39 19.4 44 26 44 C32.6 44 38 39 38 32 C38 22 26 10 26 10Z" fill="rgba(0,255,209,0.1)" stroke="#00FFD1" stroke-width="1.8"/>
+        <path d="M26 44 C26 44 26 36 32 30" fill="none" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+        <circle cx="26" cy="36" r="3" fill="#00FFD1" opacity=".6" style="animation:dropAnim 2s ease-in-out infinite"/>
+        <path d="M26 18 Q30 26 28 32" fill="none" stroke="#00FFD1" stroke-width="1.2" stroke-linecap="round" opacity=".4" style="animation:kp 3s ease-in-out infinite"/>
+        <circle cx="22" cy="26" r="2" fill="#00FFD1" opacity=".4" style="animation:bubbleRise 2.5s ease-out infinite"/>
+        <circle cx="30" cy="30" r="1.5" fill="#00FFD1" opacity=".4" style="animation:bubbleRise 2.5s ease-out .7s infinite"/>
+      </svg>
+      <div class="proj-name">Havakand</div>
+    </div>
+    <!-- Aqua De Luxe -->
+    <div class="proj-card">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <rect x="16" y="14" width="20" height="30" rx="3" fill="none" stroke="#00FFD1" stroke-width="1.8"/>
+        <rect x="19" y="10" width="14" height="6" rx="2" fill="none" stroke="#00FFD1" stroke-width="1.5" opacity=".7"/>
+        <rect x="18" y="16" width="16" height="8" rx="1" fill="rgba(0,194,255,0.15)" style="animation:kp 3s ease-in-out infinite"/>
+        <path d="M16 30 Q22 27 26 30 Q30 33 36 30" fill="none" stroke="#00C2FF" stroke-width="1.5" style="animation:snR 2s ease-in-out infinite"/>
+        <path d="M16 34 Q22 31 26 34 Q30 37 36 34" fill="none" stroke="#00C2FF" stroke-width="1" opacity=".5" style="animation:snR 2s ease-in-out .3s infinite"/>
+        <circle cx="26" cy="22" r="2" fill="#00C2FF" style="animation:bubbleRise 2s ease-out infinite"/>
+        <circle cx="22" cy="26" r="1.5" fill="#00C2FF" style="animation:bubbleRise 2s ease-out .6s infinite"/>
+      </svg>
+      <div class="proj-name">Aqua De Luxe</div>
+    </div>
+    <!-- M Cosmetic -->
+    <div class="proj-card">
+      <svg width="52" height="52" viewBox="0 0 52 52">
+        <g style="animation:crystalGlow 2s ease-in-out infinite">
+          <polygon points="26,6 38,18 26,46 14,18" fill="none" stroke="#00FFD1" stroke-width="2"/>
+          <polygon points="26,6 38,18 26,46 14,18" fill="rgba(0,255,209,0.07)"/>
+          <line x1="14" y1="18" x2="38" y2="18" stroke="#00FFD1" stroke-width="1.5" opacity=".4"/>
+          <line x1="26" y1="6" x2="14" y2="18" stroke="#00C2FF" stroke-width="1" opacity=".5"/>
+          <line x1="26" y1="6" x2="38" y2="18" stroke="#00C2FF" stroke-width="1" opacity=".5"/>
+          <polygon points="26,6 32,13 26,16 20,13" fill="white" opacity=".6" style="animation:dsP 2s ease-in-out infinite"/>
+        </g>
+        <text x="26" y="30" text-anchor="middle" fill="#00FFD1" font-size="10" font-weight="800" font-family="monospace" opacity=".8">M</text>
+      </svg>
+      <div class="proj-name">M Cosmetic</div>
+    </div>
+  </div>
+
+  <!-- Infographic stats row -->
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:28px">
+    <div class="stat-box"><div class="stat-val">FMCG</div><div class="stat-lbl">Coca Cola</div></div>
+    <div class="stat-box"><div class="stat-val">FMCG</div><div class="stat-lbl">Dovcha — Ichimlik suvi</div></div>
+    <div class="stat-box"><div class="stat-val">Non mahsulotlari</div><div class="stat-lbl">Havakand — B2B & B2C</div></div>
+    <div class="stat-box"><div class="stat-val">Suv — FMCG</div><div class="stat-lbl">Aqua De Luxe</div></div>
+    <div class="stat-box"><div class="stat-val">Beauty</div><div class="stat-lbl">M Cosmetic</div></div>
+  </div>
+
+
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 5: KASHLUX ══ -->
+<section class="slide" id="s4">
+<div class="inner">
+  <div class="sec-title">KashLux Design</div>
+  <div class="sec-sub">2 Oylik Case Study — Instagram Natijalari</div>
+  <div class="g2 gc65">
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="none" stroke="#00FFD1" stroke-width="1.5" style="animation:kp 2s ease-in-out infinite"/><line x1="7" y1="4" x2="7" y2="7" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="7" x2="9.5" y2="7" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Bajarilgan Ishlar
+      </div>
+      <div class="timeline">
+        <div class="step"><div class="step-num">01</div><div><div class="step-title">SMM Strategiya</div><div class="step-desc">Brend uchun maxsus strategiya ishlab chiqildi</div></div></div>
+        <div class="step"><div class="step-num">02</div><div><div class="step-title">Brend Positioning</div><div class="step-desc">Auditoriya tahlili va maqsadli segmentatsiya</div></div></div>
+        <div class="step"><div class="step-num">03</div><div><div class="step-title">Kontent Yaratish</div><div class="step-desc">Reels, karusel va Stories formatlari</div></div></div>
+        <div class="step"><div class="step-num">04</div><div><div class="step-title">Tone of Voice</div><div class="step-desc">Brend ovozi va vizual konsept yaratildi</div></div></div>
+        <div class="step"><div class="step-num">05</div><div><div class="step-title">Raqobatchilar Tahlili</div><div class="step-desc">Bozordagi o'rinni aniqlashtirish</div></div></div>
+        <div class="step"><div class="step-num">06</div><div><div class="step-title">CTA & Ekspert Kontent</div><div class="step-desc">Showroom trafigi va dizayner auditoriyasi</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="8" width="3" height="4" rx="1" fill="#00FFD1" style="animation:b1a 2s ease-in-out infinite;transform-origin:3.5px 12px"/><rect x="6" y="5" width="3" height="7" rx="1" fill="#00FFD1" style="animation:b2a 2s ease-in-out .3s infinite;transform-origin:7.5px 12px"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#00FFD1" style="animation:b3a 2s ease-in-out .6s infinite;transform-origin:11.5px 12px"/></svg>
+        Instagram Natijalari
+      </div>
+      <div class="metrics-grid">
+        <div class="metric"><div class="metric-val" data-target="12" data-suffix="M">0</div><div class="metric-lbl">Ko'rishlar</div></div>
+        <div class="metric"><div class="metric-val" data-target="4" data-suffix="M">0</div><div class="metric-lbl">Qamrov</div><div class="metric-grow">+730% ↑</div></div>
+        <div class="metric"><div class="metric-val" data-target="54" data-suffix="K">0</div><div class="metric-lbl">Profil Harakatlari</div><div class="metric-grow">+344% ↑</div></div>
+        <div class="metric"><div class="metric-val" data-target="32" data-suffix="K">0</div><div class="metric-lbl">Interaksiyalar</div></div>
+        <div class="metric"><div class="metric-val" data-target="2686" data-suffix="">0</div><div class="metric-lbl">Yangi Obunachilar</div></div>
+        <div class="metric"><div class="metric-val" data-target="185" data-suffix="">0</div><div class="metric-lbl">Havola Bosimlari</div><div class="metric-grow">+32% ↑</div></div>
+      </div>
+      <div class="rings-row" style="margin-top:28px">
+        <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="kr1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#kr1)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="kr1c" data-pct="73" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">+730% Qamrov</div></div>
+        <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="kr2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#kr2)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="kr2c" data-pct="34" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">+344% Profil</div></div>
+        <div class="ring-item"><svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100"><defs><linearGradient id="kr3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs><circle cx="50" cy="50" r="38" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="none" stroke="url(#kr3)" stroke-width="7" stroke-linecap="round" stroke-dasharray="239" stroke-dashoffset="239" id="kr3c" data-pct="32" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 5px #00FFD1)"/></svg><div class="ring-label">+32% Havola</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 6: APOLLO + COSMOS ══ -->
+<section class="slide" id="s5">
+<div class="inner">
+  <div class="sec-title">Apollo & Cosmos Travel</div>
+  <div class="sec-sub">Case Study — Sayohat Agentliklari uchun SMM & Reklama</div>
+  <div class="g2 gc11">
+    <!-- Apollo -->
+    <div class="cs-card">
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7 L10 3 L12 5 L7 7 L10 10 L9 11 L6 8 L3 9Z" fill="#00FFD1" style="animation:plnF 3s ease-in-out infinite"/></svg>
+        Apollo Travel
+      </div>
+      <div style="font-family:Georgia,serif;font-size:22px;font-weight:800;margin-bottom:16px">May Oyi Natijalari</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div class="stat-box"><div class="stat-val">$100K</div><div class="stat-lbl">Bitta Xodim Savdosi</div></div>
+        <div class="stat-box"><div class="stat-val">70-80%</div><div class="stat-lbl">Sifatli Lidlar</div></div>
+      </div>
+      <!-- Bajarilgan ishlar -->
+      <div style="margin-bottom:16px">
+        <div class="info-row" id="ap1"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">Yuqori konversiyali reklama</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Meta reklama kampaniyalari sozlandi</div></div></div>
+        <div class="info-row" id="ap2"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">Auditoriya segmentatsiyasi</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Sayohat severlar aniq targetlandi</div></div></div>
+        <div class="info-row" id="ap3"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">Jamoaviy savdo rekordi</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Butun jamoa bo'yicha eng yuqori ko'rsatkich</div></div></div>
+      </div>
+      <div class="funnel">
+        <div class="funnel-step" style="width:100%">Reklama</div>
+        <div class="funnel-step" style="width:82%">Sifatli Lidlar — 70-80%</div>
+        <div class="funnel-step" style="width:64%">Konsultatsiya</div>
+        <div class="funnel-step hi" style="width:46%">Savdo — $100K</div>
+      </div>
+    </div>
+    <!-- Cosmos -->
+    <div class="cs-card">
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2 C7 2 3 5.5 3 8.5 C3 10.5 4.8 12 7 12 C9.2 12 11 10.5 11 8.5 C11 5.5 7 2 7 2Z" fill="none" stroke="#00FFD1" stroke-width="1.5" style="animation:kp 2s ease-in-out infinite"/></svg>
+        Cosmos Travel
+      </div>
+      <div style="font-family:Georgia,serif;font-size:22px;font-weight:800;margin-bottom:16px">Loyiha Natijalari</div>
+      <div class="cosmos-row" style="margin-bottom:20px">
+        <div style="position:relative;width:120px;height:120px;flex-shrink:0">
+          <svg class="ring-svg" width="120" height="120" viewBox="0 0 120 120">
+            <defs><linearGradient id="cg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7B61FF"/><stop offset="100%" stop-color="#00FFD1"/></linearGradient></defs>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(0,255,209,0.07)" stroke-width="8"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="url(#cg1)" stroke-width="8" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="301" id="crc1" style="transition:stroke-dashoffset 1.8s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 8px #00FFD1)"/>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-size:26px;font-weight:800;color:var(--c);font-family:monospace" id="cosC1">0</div>
+            <div style="font-size:10px;color:rgba(232,244,255,.4);letter-spacing:1px">Sifatli Lidlar</div>
+          </div>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:12px;color:rgba(232,244,255,.4);margin-bottom:12px">Barcha kelib tushgan lidlarning 90% sifatli edi</div>
+          <div class="hbar-wrap"><div class="hbar-label"><span>Sifatli Lidlar</span><span style="color:var(--c)">90%</span></div><div class="hbar-track"><div class="hbar-fill cos-bar" data-w="90"></div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="cosmos-pt" id="cs1"><div class="cosmos-dot2"></div>CPL bozor o'rtacha ko'rsatkichidan sezilarli past</div>
+        <div class="cosmos-pt" id="cs2"><div class="cosmos-dot2"></div>Konversiya darajasi sezilarli yaxshilandi</div>
+        <div class="cosmos-pt" id="cs3"><div class="cosmos-dot2"></div>Aniq maqsadli auditoriya segmentatsiyasi amalga oshirildi</div>
+      </div>
+    </div>
+  </div>
+  <!-- CPL infographic -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px">
+    <div class="stat-box metric"><div class="stat-val">CPL</div><div class="stat-lbl">Bozordan Past</div></div>
+    <div class="stat-box metric"><div class="stat-val">Apollo: 70-80%</div><div class="stat-lbl">Sifatli Lidlar ulushi</div></div>
+    <div class="stat-box metric"><div class="stat-val">Rekord</div><div class="stat-lbl">Savdo Ko'rsatkichi</div></div>
+  </div>
+</div>
+</section>
+<div class="div"></div>
+
+<!-- ══ SLIDE 7: HI-PAD ══ -->
+<section class="slide" id="s6">
+<div class="inner">
+  <div class="sec-title">Hi-Pad</div>
+  <div class="sec-sub">4 Oylik Case Study — O'zbekiston Miqyosida B2B & B2C</div>
+  <div style="font-size:14px;color:rgba(232,244,255,.5);margin-bottom:32px;max-width:800px;line-height:1.7">
+    Hi-PAD — yengil avtomobillar uchun keramik va sertifikatlangan tormoz kolodkalari bilan shug'ullanuvchi loyiha. To'g'ridan-to'g'ri import asosida O'zbekiston bozorida xavfsiz, jim va uzoq xizmat qiladigan mahsulotlar taqdim etiladi.
+  </div>
+  <div class="g2 gc11">
+    <!-- Bajarilgan Ishlar -->
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="#00FFD1" stroke-width="1.5"/><line x1="5" y1="7" x2="9" y2="7" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="5" x2="7" y2="9" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Bajarilgan Ishlar
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="stat-box">
+          <svg width="36" height="36" viewBox="0 0 36 36" style="margin:0 auto 10px"><g style="animation:srA 2.5s ease-out infinite;transform-origin:18px 18px"><circle cx="18" cy="18" r="15" fill="none" stroke="#00FFD1" stroke-width="1" opacity=".3"/></g><circle cx="18" cy="18" r="10" fill="rgba(0,255,209,0.1)" stroke="#00FFD1" stroke-width="1.5"/><path d="M12 18 Q18 12 24 18 Q18 24 12 18Z" fill="#00FFD1" opacity=".7" style="animation:kp 2s ease-in-out infinite"/></svg>
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px">Auditoriya Segmentatsiyasi</div>
+          <div style="font-size:11px;color:rgba(232,244,255,.4)">B2B va B2C auditoriyani topish va segmentatsiya qilish</div>
+        </div>
+        <div class="stat-box">
+          <svg width="36" height="36" viewBox="0 0 36 36" style="margin:0 auto 10px"><rect x="4" y="10" width="28" height="18" rx="3" fill="none" stroke="#00FFD1" stroke-width="1.8" style="animation:b2a 2.5s ease-in-out infinite;transform-origin:18px 19px"/><polyline points="8,22 13,16 18,19 23,12 28,14" fill="none" stroke="#00FFD1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:40;animation:tld 2.5s ease-in-out infinite"/></svg>
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px">SMM Strategiya</div>
+          <div style="font-size:11px;color:rgba(232,244,255,.4)">B2B va B2C yo'nalishida maxsus strategiya</div>
+        </div>
+        <div class="stat-box">
+          <svg width="36" height="36" viewBox="0 0 36 36" style="margin:0 auto 10px"><g style="animation:spR 4s linear infinite;transform-origin:18px 18px"><path d="M18 3 L19.5 14 L18 18 L16.5 14Z" fill="#00FFD1" opacity=".8"/><path d="M18 3 L19.5 14 L18 18 L16.5 14Z" fill="#00C2FF" opacity=".6" transform="rotate(90,18,18)"/><path d="M18 3 L19.5 14 L18 18 L16.5 14Z" fill="#00FFD1" opacity=".8" transform="rotate(180,18,18)"/><path d="M18 3 L19.5 14 L18 18 L16.5 14Z" fill="#00C2FF" opacity=".6" transform="rotate(270,18,18)"/></g><circle cx="18" cy="18" r="4" fill="#00FFD1"/></svg>
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px">Kreativ Kontent</div>
+          <div style="font-size:11px;color:rgba(232,244,255,.4)">B2B va B2C auditoriya uchun moslashtirilgan kontent</div>
+        </div>
+        <div class="stat-box">
+          <svg width="36" height="36" viewBox="0 0 36 36" style="margin:0 auto 10px"><circle cx="18" cy="18" r="12" fill="none" stroke="#00FFD1" stroke-width="1.8" style="animation:kp 2s ease-in-out infinite"/><line x1="6" y1="18" x2="30" y2="18" stroke="#00FFD1" stroke-width="1" opacity=".3"/><line x1="18" y1="6" x2="18" y2="30" stroke="#00FFD1" stroke-width="1" opacity=".3"/><circle cx="12" cy="14" r="3" fill="rgba(0,255,209,0.3)" stroke="#00FFD1" stroke-width="1.2"/><circle cx="24" cy="22" r="3" fill="rgba(0,255,209,0.3)" stroke="#00FFD1" stroke-width="1.2"/><circle cx="22" cy="13" r="2" fill="rgba(0,194,255,0.3)" stroke="#00C2FF" stroke-width="1"/></svg>
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px">Bozor Tahlili</div>
+          <div style="font-size:11px;color:rgba(232,244,255,.4)">Raqobatchilar tahlili va bozor tadqiqoti</div>
+        </div>
+      </div>
+    </div>
+    <!-- Natijalar -->
+    <div>
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14"><polyline points="2,10 5,7 8,8.5 11,4 13,5" fill="none" stroke="#00FFD1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:20;animation:tld 2s ease-in-out infinite"/></svg>
+        4 Oylik Natijalar
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+        <div class="stat-box"><div class="stat-val" data-target="12" data-suffix="" id="hp1">0</div><div class="stat-lbl">Viloyat</div></div>
+        <div class="stat-box"><div class="stat-val">B2B</div><div class="stat-lbl">Toshkent STOlar</div></div>
+      </div>
+      <div class="info-row" id="hp2"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">B2B Hamkorlik Tizimi</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Barqaror va kengayuvchan biznesdan-biznesga hamkorlik tizimi qurildi</div></div></div>
+      <div class="info-row" id="hp3"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">Savdo Geografiyasi</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Butun O'zbekiston bo'ylab kengaytirilgan tarqatish tarmog'i</div></div></div>
+      <div class="info-row" id="hp4"><div class="cosmos-dot2"></div><div><div style="font-size:13px;font-weight:600">Toshkent STOlar</div><div style="font-size:11px;color:rgba(232,244,255,.4)">Butun poytaxtdagi servis stansiyalari bilan savdo yo'lga qo'yildi</div></div></div>
+      <div class="pin-grid" id="pins" style="margin-top:16px"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+// STARS
+const se=document.getElementById('stars');
+for(let i=0;i<110;i++){
+  const s=document.createElement('div');
+  const sz=Math.random()*2+.5,x=Math.random()*100,y=Math.random()*100,d=Math.random()*3+2,dl=Math.random()*5;
+  s.style.cssText=`position:absolute;border-radius:50%;background:white;width:${sz}px;height:${sz}px;left:${x}%;top:${y}%;animation:twinkle ${d}s ease-in-out ${dl}s infinite`;
+  se.appendChild(s);
+}
+
+// PINS
+const vils=["Toshkent","Samarqand","Buxoro","Namangan","Andijon","Farg'ona","Qashqadaryo","Surxondaryo","Xorazm","Navoiy","Sirdaryo","Jizzax"];
+const pe=document.getElementById('pins');
+vils.forEach(v=>{const d=document.createElement('div');d.className='pin';d.innerHTML=`<div class="pin-dot"></div><div class="pin-name">${v}</div>`;pe.appendChild(d);});
+
+// NAV
+const TOTAL=7;
+function goTo(i){document.getElementById('s'+i).scrollIntoView({behavior:'smooth'});}
+window.addEventListener('scroll',()=>{
+  const idx=Math.min(Math.round(window.scrollY/window.innerHeight),TOTAL-1);
+  document.querySelectorAll('.navdot').forEach((d,i)=>d.classList.toggle('on',i===idx));
+});
+
+// COUNTER
+function animCount(el,target,suffix,dur=2000){
+  const start=performance.now();
+  function step(now){
+    const p=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-p,4);
+    el.textContent=Math.round(ease*target).toLocaleString()+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// RING
+function animRing(el,pct,circ=239){
+  el.style.strokeDashoffset=circ-(pct/100)*circ;
+}
+
+// MAIN OBSERVER
+const done=new Set();
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting||done.has(e.target.id))return;
+    const sl=e.target;
+    done.add(sl.id);
+    sl.classList.add('vis');
+
+    // skill cards
+    sl.querySelectorAll('.skill-card').forEach((c,i)=>setTimeout(()=>c.classList.add('vis'),i*80));
+    // proj cards
+    sl.querySelectorAll('.proj-card').forEach((c,i)=>setTimeout(()=>c.classList.add('vis'),i*55));
+    // steps
+    sl.querySelectorAll('.step').forEach((c,i)=>setTimeout(()=>c.classList.add('vis'),i*90));
+    // metrics
+    sl.querySelectorAll('.metric').forEach((c,i)=>setTimeout(()=>{
+      c.classList.add('vis');
+      const v=c.querySelector('.metric-val');
+      if(v&&v.dataset.target)animCount(v,parseInt(v.dataset.target),v.dataset.suffix||'',1800);
+    },i*80+200));
+    // stat-box counters
+    sl.querySelectorAll('.stat-box .stat-val[data-target]').forEach((v,i)=>setTimeout(()=>animCount(v,parseInt(v.dataset.target),v.dataset.suffix||'',1800),i*100+300));
+    // standalone counters
+    ['hp1'].forEach(id=>{const el=document.getElementById(id);if(el&&el.dataset.target)setTimeout(()=>animCount(el,parseInt(el.dataset.target),'',1800),400);});
+    // lang bars
+    ['l1','l2','l3'].forEach((id,i)=>{
+      const el=document.getElementById(id);if(!el)return;
+      setTimeout(()=>{el.classList.add('vis');const f=el.querySelector('.lang-fill');if(f)setTimeout(()=>f.style.width=f.dataset.w+'%',100);},i*200+300);
+    });
+    // hbars
+    sl.querySelectorAll('.hbar-fill').forEach((f,i)=>setTimeout(()=>f.style.width=f.dataset.w+'%',i*150+400));
+    // rings
+    setTimeout(()=>{
+      ['rc1','rc2','rc3'].forEach((id,i)=>{const el=document.getElementById(id);if(!el)return;setTimeout(()=>animRing(el,parseInt(el.dataset.pct)),i*200);});
+      ['kr1c','kr2c','kr3c'].forEach((id,i)=>{const el=document.getElementById(id);if(!el)return;setTimeout(()=>animRing(el,parseInt(el.dataset.pct)),i*200+400);});
+    },500);
+    // hero rings
+    const hr1=document.getElementById('hr1');const hr2=document.getElementById('hr2');
+    if(hr1)setTimeout(()=>{hr1.style.strokeDashoffset=0;animCount(document.getElementById('hc1'),1,'',1600);},900);
+    if(hr2)setTimeout(()=>{hr2.style.strokeDashoffset=0;animCount(document.getElementById('hc2'),11,'',1600);},1100);
+    // big number
+    const bn=document.getElementById('bigN');if(bn)setTimeout(()=>animCount(bn,11,'',1400),300);
+    // cosmos rings
+    const c1=document.getElementById('crc1');const cc1=document.getElementById('cosC1');
+    if(c1)setTimeout(()=>{const circ=301;c1.style.strokeDashoffset=circ-(90/100)*circ;if(cc1)animCount(cc1,90,'%',1800);},400);
+    // funnel
+    sl.querySelectorAll('.funnel-step').forEach((s,i)=>setTimeout(()=>s.classList.add('vis'),i*140+200));
+    // pins
+    sl.querySelectorAll('.pin').forEach((p,i)=>setTimeout(()=>p.classList.add('vis'),i*50+200));
+    // info rows
+    sl.querySelectorAll('.info-row').forEach((p,i)=>setTimeout(()=>p.classList.add('vis'),i*120+300));
+    // cosmos points
+    sl.querySelectorAll('.cosmos-pt').forEach((p,i)=>setTimeout(()=>p.classList.add('vis'),i*140+400));
+    // cos bars
+    sl.querySelectorAll('.cos-bar').forEach((f,i)=>setTimeout(()=>f.style.width=f.dataset.w+'%',i*200+600));
+  });
+},{threshold:0.1});
+document.querySelectorAll('.slide').forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
